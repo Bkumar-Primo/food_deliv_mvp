@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Primotech, Food Delivery MVP Build Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="doc-header">
+    <img src="primotech.svg" alt="Primotech" />
+    <div class="doc-meta">
+      <span class="badge">Internal &middot; MVP plan</span><br />
+      Date: 11 June 2026
+    </div>
+  </header>
+
+  <!-- TITLE -->
+  <div class="title-block">
+    <div class="eyebrow">Food Delivery MVP, Build Plan</div>
+    <h1 class="doc-title">Two weeks. Three devs. A premium UI food-delivery demo ready.</h1>
+
+    <div class="hero-strip" aria-hidden="true">
+      <svg width="34" height="26" viewBox="0 0 34 26" fill="none" stroke="#2a3243" stroke-width="1.4">
+        <path d="M3 9 Q17 1 31 9" stroke-linecap="round" />
+        <line x1="3" y1="13" x2="31" y2="13" />
+        <path d="M3 17 Q9 20 17 17 Q25 14 31 17" stroke-linecap="round" />
+        <path d="M3 22 Q17 26 31 22" stroke-linecap="round" />
+      </svg>
+      <span class="sep"></span>
+      <svg width="28" height="26" viewBox="0 0 28 26" fill="none" stroke="#2a3243" stroke-width="1.4">
+        <path d="M14 2 L26 24 L2 24 Z" stroke-linejoin="round" />
+        <circle cx="14" cy="11" r="1.4" fill="#2a3243" stroke="none" />
+        <circle cx="10" cy="18" r="1.4" fill="#2a3243" stroke="none" />
+        <circle cx="18" cy="18" r="1.4" fill="#2a3243" stroke="none" />
+      </svg>
+      <span class="sep"></span>
+      <svg width="22" height="26" viewBox="0 0 22 26" fill="none" stroke="#2a3243" stroke-width="1.4">
+        <path d="M4 6 L6 24 L16 24 L18 6 Z" stroke-linejoin="round" />
+        <path d="M18 10 Q22 11 22 14 Q22 17 18 18" />
+        <path d="M8 2 Q9 4 8 6 M11 2 Q12 4 11 6 M14 2 Q15 4 14 6" stroke-linecap="round" />
+      </svg>
+      <span class="sep"></span>
+      <svg width="40" height="26" viewBox="0 0 40 26" fill="none" stroke="#2a3243" stroke-width="1.4">
+        <circle cx="8" cy="20" r="4" />
+        <circle cx="32" cy="20" r="4" />
+        <path d="M8 20 L20 20 L24 10 L30 10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M24 10 L22 6 L18 6" stroke-linecap="round" />
+        <rect x="14" y="8" width="6" height="6" />
+      </svg>
+      <span class="sep"></span>
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#2a3243" stroke-width="1.4">
+        <path d="M4 8 L4 23 L22 23 L22 8 Z" stroke-linejoin="round" />
+        <path d="M9 8 Q9 3 13 3 Q17 3 17 8" />
+        <line x1="4" y1="13" x2="22" y2="13" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- TL;DR / INTRO -->
+  <p>
+    Food-delivery MVP for the Primotech marketing site, three demo apps: Customer, Rider, Admin web.
+    As agreed earlier, this is <strong>UI-only</strong>: no backend on this clock, hardcoded JSON + scripted
+    timing make the demo flow look live. Two weeks, three frontend devs, AI-assisted (Claude Code / Cursor) on a
+    spec-first workflow. Week 1: every screen built and navigable. Week 2: polish, scripted demo.
+    deployed previews (Vercel + Expo EAS). AI budget: $20 per dev = $60 total.
+  </p>
+
+  <!-- 1. WHAT WE'RE BUILDING -->
+  <section>
+    <h2><span class="num">01</span>What we're building, three demo apps</h2>
+    <p>
+      One food-delivery MVP, three surfaces. The Primotech website will host a live preview
+      links of these three apps so a prospect can see a working-looking product in 30 seconds. Each app is
+      <strong>UI-complete and navigable</strong>, runs on hardcoded demo data, and scripts a happy-path flow
+      that looks indistinguishable from the real thing in a short live demo.
+    </p>
+
+    <div class="app-grid">
+
+      <!-- Customer -->
+      <div class="app-card">
+        <div class="mock">
+          <svg width="120" height="200" viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="112" height="192" rx="14" fill="#fff" stroke="#0b1220" stroke-width="1.4"/>
+            <rect x="48" y="6" width="24" height="5" rx="2.5" fill="#0b1220"/>
+            <rect x="10" y="18" width="100" height="20" fill="#f6f7f9"/>
+            <text x="16" y="32" font-family="Georgia, serif" font-size="9" fill="#0b1220" font-weight="700">Restaurants</text>
+            <rect x="10" y="44" width="100" height="22" rx="2" fill="none" stroke="#d9dde4"/>
+            <rect x="14" y="48" width="14" height="14" rx="2" fill="#2a3243" opacity="0.25"/>
+            <line x1="32" y1="52" x2="100" y2="52" stroke="#0b1220" stroke-width="1.2"/>
+            <line x1="32" y1="58" x2="80" y2="58" stroke="#5b6478" stroke-width="0.8"/>
+            <rect x="10" y="72" width="100" height="22" rx="2" fill="none" stroke="#d9dde4"/>
+            <rect x="14" y="76" width="14" height="14" rx="2" fill="#2a3243" opacity="0.25"/>
+            <line x1="32" y1="80" x2="100" y2="80" stroke="#0b1220" stroke-width="1.2"/>
+            <line x1="32" y1="86" x2="74" y2="86" stroke="#5b6478" stroke-width="0.8"/>
+            <rect x="10" y="100" width="100" height="22" rx="2" fill="none" stroke="#d9dde4"/>
+            <rect x="14" y="104" width="14" height="14" rx="2" fill="#2a3243" opacity="0.25"/>
+            <line x1="32" y1="108" x2="100" y2="108" stroke="#0b1220" stroke-width="1.2"/>
+            <line x1="32" y1="114" x2="84" y2="114" stroke="#5b6478" stroke-width="0.8"/>
+            <rect x="10" y="170" width="100" height="18" rx="9" fill="#0b1220"/>
+            <text x="60" y="182" font-family="-apple-system, sans-serif" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">View cart &middot; &#8377;420</text>
+          </svg>
+        </div>
+        <div class="name">Customer App</div>
+        <div class="platform">Mobile &middot; Expo</div>
+        <p class="blurb"><strong>For customers</strong>, to discover restaurants, build a cart, place an order, and watch the rider live on a map.</p>
+        <div class="count">12 screens</div>
+      </div>
+
+      <!-- Rider -->
+      <div class="app-card">
+        <div class="mock">
+          <svg width="120" height="200" viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="112" height="192" rx="14" fill="#fff" stroke="#0b1220" stroke-width="1.4"/>
+            <rect x="48" y="6" width="24" height="5" rx="2.5" fill="#0b1220"/>
+            <rect x="10" y="18" width="100" height="20" fill="#f6f7f9"/>
+            <text x="16" y="32" font-family="Georgia, serif" font-size="9" fill="#0b1220" font-weight="700">Active delivery</text>
+            <rect x="10" y="44" width="100" height="80" fill="#f6f7f9" stroke="#d9dde4"/>
+            <path d="M14 110 Q40 70 70 90 Q90 102 105 60" fill="none" stroke="#1f6f43" stroke-width="1.6" stroke-dasharray="3,2"/>
+            <circle cx="14" cy="110" r="3" fill="#2a3243"/>
+            <circle cx="105" cy="60" r="3" fill="#5b6478"/>
+            <line x1="10" y1="64" x2="110" y2="64" stroke="#ecedf1"/>
+            <line x1="10" y1="84" x2="110" y2="84" stroke="#ecedf1"/>
+            <line x1="10" y1="104" x2="110" y2="104" stroke="#ecedf1"/>
+            <line x1="40" y1="44" x2="40" y2="124" stroke="#ecedf1"/>
+            <line x1="80" y1="44" x2="80" y2="124" stroke="#ecedf1"/>
+            <line x1="14" y1="134" x2="60" y2="134" stroke="#0b1220" stroke-width="1.2"/>
+            <line x1="14" y1="142" x2="90" y2="142" stroke="#5b6478" stroke-width="0.8"/>
+            <line x1="14" y1="150" x2="78" y2="150" stroke="#5b6478" stroke-width="0.8"/>
+            <rect x="10" y="170" width="100" height="18" rx="9" fill="#14181f"/>
+            <text x="60" y="182" font-family="-apple-system, sans-serif" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">Mark delivered</text>
+          </svg>
+        </div>
+        <div class="name">Rider App</div>
+        <div class="platform">Mobile &middot; Expo</div>
+        <p class="blurb"><strong>For delivery riders</strong>, to see nearby orders, accept one, navigate pickup &rarr; drop, and mark delivered.</p>
+        <div class="count">12 screens</div>
+      </div>
+
+      <!-- Admin -->
+      <div class="app-card">
+        <div class="mock">
+          <svg width="160" height="120" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="152" height="100" rx="3" fill="#fff" stroke="#0b1220" stroke-width="1.4"/>
+            <rect x="4" y="4" width="152" height="14" fill="#0b1220"/>
+            <circle cx="11" cy="11" r="1.6" fill="#f08a82"/>
+            <circle cx="17" cy="11" r="1.6" fill="#f1c25b"/>
+            <circle cx="23" cy="11" r="1.6" fill="#7fd1a3"/>
+            <rect x="4" y="18" width="34" height="86" fill="#f6f7f9"/>
+            <line x1="10" y1="28" x2="32" y2="28" stroke="#0b1220" stroke-width="1.2"/>
+            <line x1="10" y1="36" x2="32" y2="36" stroke="#5b6478" stroke-width="0.8"/>
+            <line x1="10" y1="44" x2="32" y2="44" stroke="#5b6478" stroke-width="0.8"/>
+            <line x1="10" y1="52" x2="32" y2="52" stroke="#5b6478" stroke-width="0.8"/>
+            <line x1="10" y1="60" x2="32" y2="60" stroke="#5b6478" stroke-width="0.8"/>
+            <rect x="42" y="22" width="110" height="22" rx="2" fill="#fdecea" stroke="#b3261e" stroke-width="1.2"/>
+            <text x="97" y="36" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#b3261e" font-weight="700">NEW ORDER &middot; &#8377;420</text>
+            <rect x="42" y="48" width="110" height="30" fill="none" stroke="#d9dde4"/>
+            <polyline points="46,72 60,62 74,68 88,54 102,60 116,48 130,56 148,50" fill="none" stroke="#2a3243" stroke-width="1.5"/>
+            <line x1="42" y1="84" x2="152" y2="84" stroke="#0b1220" stroke-width="1.2"/>
+            <line x1="42" y1="92" x2="152" y2="92" stroke="#ecedf1"/>
+            <line x1="42" y1="100" x2="152" y2="100" stroke="#ecedf1"/>
+          </svg>
+        </div>
+        <div class="name">Admin Web</div>
+        <div class="platform">Web &middot; React + Vite</div>
+        <p class="blurb"><strong>For restaurant staff</strong>, the main moment: when an order comes in, the screen shows a bold <strong>NEW ORDER</strong> banner + sound. Accept, assign a rider, done.</p>
+        <div class="count">9 screens</div>
+      </div>
+
+    </div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:10px;">
+      <strong>~33 screens total.</strong> Restaurant-side accept order lives inside the Admin web. No separate Merchant app.
+    </p>
+  </section>
+
+  <!-- 2. NO BACKEND -->
+  <section>
+    <h2><span class="num">02</span>No backend, UI is the work</h2>
+    <p>
+      As <strong>decided and discussed earlier</strong>, we will <strong>not be spending time on backend
+      integration</strong> on this build, there is <strong>no backend</strong>. No server, no database,
+      no auth provider, no FCM, no Firebase. Every app runs entirely on hardcoded JSON + local state, and the
+      realtime feel of an order flowing from Customer to Admin to Rider is achieved with
+      <strong>scripted timing</strong> in demo mode, perfect for a recorded video, and good enough for a
+      60-second live click-through with a prospect.
+    </p>
+
+    <div class="callout gold">
+      <div class="head">Where the saved hours go: premium UI</div>
+      <p style="margin:0; font-size:13.5px; color: var(--ink);">
+        Food images pulled from the open web (Unsplash, Pexels, whatever looks right) so every restaurant and
+        dish has an image, no empty grey placeholders. Skeleton loaders, not spinners. Smooth screen transitions
+        and micro-animations on cart updates. Haptic feedback on key actions. Proper empty states.
+        Pull-to-refresh that feels native. Typography and spacing that look designed, not defaulted.
+        Pixel-checked on a real device every day. <strong>This is the work.</strong>
+      </p>
+    </div>
+
+    <h3>How works like a real app happens without a backend</h3>
+    <ul>
+      <li><strong>Data:</strong> hardcoded JSON (10 restaurants, 50 menu items, 30 historical orders, 5 riders, 1 demo user).</li>
+      <li><strong>Auth:</strong> phone-OTP screens are UI only. Any number + code <code>000000</code> logs in to the hardcoded demo user. No SMS, no provider.</li>
+      <li><strong>Order placement:</strong> writes to local state (AsyncStorage on mobile, localStorage on web).</li>
+      <li><strong>Cross-app feel:</strong> in demo mode, a scripted timer in Admin shows NEW ORDER ~3s after a customer order; rider app surfaces it ~5s later.</li>
+      <li><strong>Live tracking:</strong> the rider icon animates along a pre-defined map route, no real GPS, no realtime layer.</li>
+      <li><strong>Push notifications:</strong> in-app toast/banner only. No real OS push (no FCM, no APNs registration).</li>
+    </ul>
+  </section>
+
+  <!-- 3. SCREEN INVENTORY -->
+  <section>
+    <h2><span class="num">03</span>Screen inventory, every screen, every app</h2>
+    <p>
+      Each screen is sized to fit one focused day of work or less. The basics (profile, notifications, order
+      history, addresses) are explicitly in, a demo without them looks like a prototype, not a product.
+    </p>
+
+    <h3>Customer app,12 screens</h3>
+    <table>
+      <thead><tr><th>#</th><th style="width:26%">Screen</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td class="idx">1</td><td><strong>Splash / Onboarding</strong></td><td>Brand splash, two-slide intro for first-time users.</td></tr>
+        <tr><td class="idx">2</td><td><strong>Phone, enter number</strong></td><td>Country code + number input (UI only, no SMS sent).</td></tr>
+        <tr><td class="idx">3</td><td><strong>Phone, enter OTP</strong></td><td>6-digit input. Universal demo code <code>000000</code> always works.</td></tr>
+        <tr><td class="idx">4</td><td><strong>Home</strong></td><td>Location bar, search shortcut, categories carousel, near you restaurant feed.</td></tr>
+        <tr><td class="idx">5</td><td><strong>Search</strong></td><td>Full-screen search across restaurants and dishes, recent searches, filter chips.</td></tr>
+        <tr><td class="idx">6</td><td><strong>Restaurant detail</strong></td><td>Banner image, rating, delivery time, menu grouped by category.</td></tr>
+        <tr><td class="idx">7</td><td><strong>Item detail</strong></td><td>Photo, description, customization options, qty stepper, add-to-cart.</td></tr>
+        <tr><td class="idx">8</td><td><strong>Cart</strong></td><td>Line items, qty edit, subtotal + fees breakdown, proceed to checkout.</td></tr>
+        <tr><td class="idx">9</td><td><strong>Checkout</strong></td><td>Delivery address picker, fake payment method tile, place-order button.</td></tr>
+        <tr><td class="idx">10</td><td><strong>Order tracking</strong></td><td>Status timeline + animated rider on a Google Map (scripted route).</td></tr>
+        <tr><td class="idx">11</td><td><strong>Order history</strong></td><td>List of past orders (hardcoded) with reorder button.</td></tr>
+        <tr><td class="idx">12</td><td><strong>Profile</strong></td><td>Name, saved addresses, payment methods, notifications toggle, logout.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Rider app,12 screens</h3>
+    <table>
+      <thead><tr><th>#</th><th style="width:26%">Screen</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td class="idx">1</td><td><strong>Splash / Onboarding</strong></td><td>Brand splash + two-slide intro (earn on your schedule) for first-time riders.</td></tr>
+        <tr><td class="idx">2</td><td><strong>Phone, enter number</strong></td><td>Country code + number input (UI only, no SMS sent).</td></tr>
+        <tr><td class="idx">3</td><td><strong>Phone, enter OTP</strong></td><td>6-digit input. Universal demo code <code>000000</code> always works.</td></tr>
+        <tr><td class="idx">4</td><td><strong>Home / dashboard</strong></td><td>Online/offline toggle, today's earnings summary, current shift status, quick nav.</td></tr>
+        <tr><td class="idx">5</td><td><strong>Available orders</strong></td><td>Scripted list of unassigned orders nearby with payout, distance, tap to view.</td></tr>
+        <tr><td class="idx">6</td><td><strong>Order detail (pre-accept)</strong></td><td>Pickup + drop addresses, distance, payout breakdown, accept / decline.</td></tr>
+        <tr><td class="idx">7</td><td><strong>Active delivery</strong></td><td>Map + step actions (arrived at pickup, picked up, arrived at drop, delivered).</td></tr>
+        <tr><td class="idx">8</td><td><strong>Delivery summary</strong></td><td>Post-delivery recap, tip prompt, earnings added, next-order CTA.</td></tr>
+        <tr><td class="idx">9</td><td><strong>Earnings / history</strong></td><td>Today/this-week earnings + past deliveries list (hardcoded).</td></tr>
+        <tr><td class="idx">10</td><td><strong>Notifications</strong></td><td>Delivery alerts, payout updates, system messages (mock list).</td></tr>
+        <tr><td class="idx">11</td><td><strong>Profile</strong></td><td>Name, bike info, mock-KYC status, ratings summary, logout.</td></tr>
+        <tr><td class="idx">12</td><td><strong>Settings / Help</strong></td><td>Notification toggles, language, in-app FAQ + contact-support form.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Admin web,9 screens</h3>
+    <table>
+      <thead><tr><th>#</th><th style="width:26%">Screen</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td class="idx">1</td><td><strong>Login</strong></td><td>Email + password (any input passes; internal-only surface).</td></tr>
+        <tr><td class="idx">2</td><td><strong>Dashboard</strong></td><td>KPI cards (orders today, revenue, active riders) + orders-over-time chart.</td></tr>
+        <tr><td class="idx">3</td><td><strong>Orders, list</strong></td><td>Filterable table. <strong>The main moment:</strong> when a new order arrives, top of screen flashes a bold <strong>NEW ORDER!</strong> banner with sound.</td></tr>
+        <tr><td class="idx">4</td><td><strong>Order detail</strong></td><td>Customer + restaurant + items. Accept / reject / assign-rider actions, the merchant accept lives here.</td></tr>
+        <tr><td class="idx">5</td><td><strong>Restaurants, list</strong></td><td>Searchable table with add / edit / disable.</td></tr>
+        <tr><td class="idx">6</td><td><strong>Restaurant menu mgmt</strong></td><td>Categories &amp; items CRUD; price, image, availability toggle.</td></tr>
+        <tr><td class="idx">7</td><td><strong>Riders, list</strong></td><td>Active riders, current status (free / on-delivery), add new rider.</td></tr>
+        <tr><td class="idx">8</td><td><strong>Customers, list</strong></td><td>Read-only customer list with order count + last order date.</td></tr>
+        <tr><td class="idx">9</td><td><strong>Settings</strong></td><td>Admin profile, app-wide toggles, notification preferences.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 4. HOW -->
+  <section>
+    <h2><span class="num">04</span>How we build, spec-first vibecoding</h2>
+
+    <p>
+      We use a spec-first approach to drive our AI coding tools. By defining clear requirements in Markdown before writing any code, we ensure the AI generates precise and reliable components without deviating from the goal.
+    </p>
+    <p>
+      For example, before building the Customer Home screen, we write a strict <code>03-home.md</code> spec detailing:
+    </p>
+    <div class="math">
+<span class="ok">## Goal</span>
+Display the main restaurant feed and top-level categories.
+
+<span class="ok">## Data</span>
+- Reads <span class="c">/data/demo.json</span> (restaurants array)
+- No fetches. Local state only.
+
+<span class="ok">## Acceptance</span>
+- [ ] Renders correctly on iPhone 14
+- [ ] Tap on restaurant pushes to <span class="ok">/restaurant/:id</span>
+    </div>
+  </section>
+
+  
+  <!-- 5. WHERE WE SOURCE UI -->
+  <section>
+    <h2><span class="num">05</span>Where we source UI</h2>
+    <p>
+      To maintain velocity, we leverage high-quality open source Figma community templates for our design foundation rather than designing from scratch. We can pull screens, components, and layout ideas directly from these UI kits:
+    </p>
+    <ul>
+      <li><a href="https://www.figma.com/design/qR1YoHQxDPD3w3jTTK06C4/Swiggy-Full-UI-KIT-Editable--Community-?node-id=0-1&p=f" target="_blank">Swiggy Full UI Kit</a></li>
+      <li><a href="https://www.figma.com/community/file/1231521889522325040/food-delivery-app" target="_blank">Food Delivery App Kit 1</a></li>
+      <li><a href="https://www.figma.com/community/mobile-apps/food-delivery?resource_type=files&editor_type=figma" target="_blank">Figma Community Search: Food Delivery</a></li>
+      <li><a href="https://www.figma.com/community/file/893381127703378146/food-delivery-app-ui-kit" target="_blank">Food Delivery App Kit 2</a></li>
+    </ul>
+    <p>
+      Extract the design tokens (colors, typography, spacing) and use them to guide the AI prompt when generating components.
+    </p>
+  </section>
+
+  <!-- 6. DEV BREAKDOWN -->
+  <section>
+    <h2><span class="num">06</span>Dev breakdown, who owns what</h2>
+    <p>
+      Three frontend devs, one owner per surface. No backend day for anyone, everyone is on UI from
+      Day 1. Each app is independent: no shared component kit, no shared data file across apps, so devs
+      never block each other. I take updates from each dev daily on what shipped that day.
+    </p>
+
+    <!-- DEV 1 -->
+    <div class="dev-block d1">
+      <div class="dev-head">
+        <span class="dev-num">01</span>
+        <span class="dev-role">Customer app</span>
+        <span class="dev-tagline">most user-facing &middot; the screens prospects watch</span>
+      </div>
+      <p style="margin-top:10px;">
+        Owns the Customer app end-to-end. This is the app that drives the demo video, the home,
+        the cart, the checkout, the live order-tracking moment. UI is built inside the app, not shared
+        across apps.
+      </p>
+
+      <h4>Screens owned (12)</h4>
+      <ul>
+        <li>Splash &middot; Phone-OTP (number + code) &middot; Home &middot; Search</li>
+        <li>Restaurant detail &middot; Item detail &middot; Cart &middot; Checkout</li>
+        <li>Order tracking (with animated map) &middot; Order history &middot; Profile &middot; Notifications</li>
+      </ul>
+
+      <h4>Week 1 deliverables</h4>
+      <ul>
+        <li>Customer app skeleton + nav + own theme tokens / component set.</li>
+        <li>Own demo-data JSON (restaurants, menu items, orders for this app).</li>
+        <li>Home, search, restaurant detail, item detail, cart, checkout.</li>
+        <li>Order tracking screen with status timeline (animated map is Week 2).</li>
+      </ul>
+
+      <h4>Week 2 deliverables</h4>
+      <ul>
+        <li>Phone-OTP UI flow wired (any number + <code>000000</code> &rarr; demo user).</li>
+        <li>Animated rider on Google Map (scripted route).</li>
+        <li>Order history, Profile, Notifications screens.</li>
+        <li>Premium polish: empty/loading states, micro-animations, haptics, web-sourced food images.</li>
+      </ul>
+
+      <p class="dep"><strong>Depends on:</strong> nothing, can start Day 1 morning.</p>
+    </div>
+
+    <!-- DEV 2 -->
+    <div class="dev-block d2">
+      <div class="dev-head">
+        <span class="dev-num">02</span>
+        <span class="dev-role">Rider app</span>
+        <span class="dev-tagline">100% rider UI</span>
+      </div>
+      <p style="margin-top:10px;">
+        Owns the Rider app end-to-end. No backend work. Free to spend the entire two weeks making the
+        Rider experience feel premium, map transitions, swipe-to-confirm actions, haptics on key steps.
+      </p>
+
+      <h4>Screens owned (12)</h4>
+      <ul>
+        <li>Splash / Onboarding &middot; Phone-OTP (number + code) &middot; Home / dashboard</li>
+        <li>Available orders &middot; Order detail (pre-accept) &middot; Active delivery (map + step actions)</li>
+        <li>Delivery summary &middot; Earnings / history &middot; Notifications &middot; Profile &middot; Settings / Help</li>
+      </ul>
+
+      <h4>Week 1 deliverables</h4>
+      <ul>
+        <li>Rider app skeleton + nav + own theme tokens / component set.</li>
+        <li>Own demo-data JSON (rider profile, available orders, past deliveries).</li>
+        <li>Home / dashboard, Available orders list, Order detail (pre-accept).</li>
+        <li>Active-delivery screen with step actions (mark picked up, mark delivered) and basic map.</li>
+      </ul>
+
+      <h4>Week 2 deliverables</h4>
+      <ul>
+        <li>Phone-OTP UI flow.</li>
+        <li>Scripted rider-location animation along a pre-defined route.</li>
+        <li>Delivery summary, Earnings/history, Notifications, Profile, Settings/Help.</li>
+        <li>Premium polish: swipe-to-confirm, transition animations, haptic feedback.</li>
+      </ul>
+
+      <p class="dep"><strong>Depends on:</strong> nothing, fully independent app, can start Day 1 morning.</p>
+    </div>
+
+    <!-- DEV 3 -->
+    <div class="dev-block d3">
+      <div class="dev-head">
+        <span class="dev-num">03</span>
+        <span class="dev-role">Admin web</span>
+        <span class="dev-tagline">the NEW ORDER moment lives here</span>
+      </div>
+      <p style="margin-top:10px;">
+        Owns the Admin web. The headline interaction is the <strong>NEW ORDER</strong> alert, when a
+        customer places an order in demo mode, the Admin orders screen flashes a bold banner with a sound.
+        That is the screenshot we put on the website.
+      </p>
+
+      <h4>Screens owned (9)</h4>
+      <ul>
+        <li>Login &middot; Dashboard &middot; Orders list (with NEW ORDER alert) &middot; Order detail (accept + assign rider)</li>
+        <li>Restaurants list &middot; Restaurant menu management</li>
+        <li>Riders list &middot; Customers list &middot; Settings</li>
+      </ul>
+
+      <h4>Week 1 deliverables</h4>
+      <ul>
+        <li>App shell (Vite + Tailwind), sidebar nav, login (any creds pass), protected routes.</li>
+        <li>Orders list backed by own demo data + filters by status.</li>
+        <li>Order detail with accept / reject / assign-rider actions.</li>
+        <li>Restaurants list + menu management (categories &amp; items CRUD against local state).</li>
+      </ul>
+
+      <h4>Week 2 deliverables</h4>
+      <ul>
+        <li><strong>NEW ORDER alert</strong>: banner + sound when scripted timer fires (or when local state mutates).</li>
+        <li>Dashboard charts (orders/day, revenue trend, top restaurants, active rider count).</li>
+        <li>Riders list, Customers list, Settings.</li>
+        <li>Final demo data polished (real-looking restaurant names, web-sourced food images, sensible prices).</li>
+        <li>Deploy to Vercel; share preview URL with leadership and marketing.</li>
+      </ul>
+
+      <p class="dep"><strong>Depends on:</strong> nothing, fully independent app.</p>
+    </div>
+  </section>
+
+  <!-- 6. WEEK 1 -->
+  <section>
+    <h2><span class="num">07</span>Week 1, every screen exists, on mocked data</h2>
+
+    <div class="day">
+      <div class="head"><span class="when">DAY 1 &middot; MON</span><span class="what">Foundation</span></div>
+      <ul>
+        <li><strong>Dev 1:</strong> Bootstrap Customer Expo app, own theme tokens / component set, own demo-data JSON, home screen scaffold.</li>
+        <li><strong>Dev 2:</strong> Bootstrap Rider Expo app, own theme tokens / component set, own demo-data JSON, home / dashboard scaffold.</li>
+        <li><strong>Dev 3:</strong> Bootstrap Admin web (Vite + Tailwind), shell + sidebar, login screen, own demo-data JSON.</li>
+        <li>EOD: three independent repos pushed, each app renders its home screen on its own mock data.</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <div class="head"><span class="when">DAY 2 &middot; TUE</span><span class="what">Browse, list, intake</span></div>
+      <ul>
+        <li><strong>Dev 1:</strong> Customer Home, restaurant list, restaurant detail with menu, item detail.</li>
+        <li><strong>Dev 2:</strong> Rider available-orders list + order detail (pre-accept).</li>
+        <li><strong>Dev 3:</strong> Admin orders list with status filters + restaurants list CRUD.</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <div class="head"><span class="when">DAY 3 &middot; WED</span><span class="what">Cart, checkout, accept</span></div>
+      <ul>
+        <li><strong>Dev 1:</strong> Cart, checkout (fake payment), order confirmation, order status timeline.</li>
+        <li><strong>Dev 2:</strong> Rider accept flow, active delivery shell (map + step actions).</li>
+        <li><strong>Dev 3:</strong> Admin order detail, accept / reject / assign rider. Restaurant menu mgmt CRUD.</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <div class="head"><span class="when">DAY 4 &middot; THU</span><span class="what">End-to-end walk-through</span></div>
+      <ul>
+        <li>All three devs together: walk a scripted order Customer &rarr; Admin (accept) &rarr; Rider (deliver) on three devices in one room. Fix every visual break.</li>
+        <li><strong>Dev 1:</strong> Search screen.</li>
+        <li><strong>Dev 3:</strong> Riders list + add-rider form.</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <div class="head"><span class="when">DAY 5 &middot; FRI</span><span class="what">Polish + first walkthrough</span></div>
+      <ul>
+        <li>Bug bash + visual cleanup pass.</li>
+        <li>Final demo data: realistic restaurant names, web-sourced food images, sensible prices.</li>
+        <li>Internal walkthrough with leadership on a real phone. Note every gap.</li>
+      </ul>
+    </div>
+
+    <div class="callout ok">
+      <div class="head">End of Week 1, what's ready</div>
+      <p style="margin:0; font-size:13.5px; color: var(--ink);">
+        <strong>Every screen exists across all three apps.</strong> A scripted demo order flows Customer &rarr;
+        Admin &rarr; Rider on local data. Week 2 is entirely about <em>making it feel premium</em>.
+      </p>
+    </div>
+  </section>
+
+  <!-- 7. WEEK 2 -->
+  <section>
+    <h2><span class="num">08</span>Week 2, phone OTP, NEW ORDER, animations, ship</h2>
+
+    <div class="day">
+      <div class="head"><span class="when">DAY 6 &middot; MON</span><span class="what">Phone OTP (UI only)</span></div>
+      <ul>
+        <li><strong>Dev 1 + Dev 2:</strong> Phone-OTP screens in Customer and Rider. Any number + <code>000000</code> &rarr; demo user. No SMS provider.</li>
+        <li><strong>Dev 3:</strong> Admin Settings screen + Customers list.</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <div class="head"><span class="when">DAY 7 &middot; TUE</span><span class="what">NEW ORDER moment + in-app notifications</span></div>
+      <ul>
+        <li><strong>Dev 3:</strong> NEW ORDER banner + sound + flash animation in Admin orders list when scripted timer fires.</li>
+        <li><strong>Dev 1:</strong> In-app toast notifications in Customer on status changes (accepted &rarr; ready &rarr; picked-up &rarr; delivered).</li>
+        <li><strong>Dev 2:</strong> In-app toast in Rider on new-order-available.</li>
+        <li>No real OS push (no FCM). Purely in-app, scripted by local timer.</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <div class="head"><span class="when">DAY 8 &middot; WED</span><span class="what">Live tracking animation + dashboard</span></div>
+      <ul>
+        <li><strong>Dev 1:</strong> Customer order screen shows a rider icon animating along a pre-defined Google Maps route.</li>
+        <li><strong>Dev 2:</strong> Same scripted animation in Rider active-delivery screen.</li>
+        <li><strong>Dev 3:</strong> Dashboard charts (orders/day, revenue trend, top restaurants).</li>
+        <li><strong>Dev 1:</strong> Order history + Profile + Notifications screens.</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <div class="head"><span class="when">DAY 9 &middot; THU</span><span class="what">Premium polish pass</span></div>
+      <ul>
+        <li>Empty states, loading skeletons, micro-animations on every list and card.</li>
+        <li>Haptic feedback on key actions (add-to-cart, place-order, mark-delivered).</li>
+        <li>Food images pulled from the open web (Unsplash, Pexels, etc.) so every restaurant and dish has an image.</li>
+        <li>Deploy: Admin to Vercel, mobile apps to Expo EAS preview (shareable QR codes).</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <div class="head"><span class="when">DAY 10 &middot; FRI</span><span class="what">Handoff</span></div>
+      <ul>
+        
+        
+        <li>Hand off EAS QR codes + Vercel URL to marketing.</li>
+        <li>Final walkthrough with CEO. <span class="pill green">Shipped</span></li>
+      </ul>
+    </div>
+
+    <div class="callout gold">
+      <div class="head">Demo auth, explicit decision</div>
+      <p style="margin:0; font-size:13.5px; color: var(--ink);">
+        Phone-OTP login is <strong>UI only</strong>. Any number + universal code <code>000000</code> logs in
+        to the hardcoded demo user. No SMS, no auth provider, no real account state. When/if a real client picks
+        this up, plugging in a real auth provider is a separate engagement, not in scope here.
+      </p>
+    </div>
+  </section>
+
+  <!-- 8. AI BUDGET -->
+  <section>
+    <h2><span class="num">09</span>AI tooling</h2>
+
+    <p>
+      Each developer gets one Cursor Pro subscription.
+    </p>
+    <p style="margin-top:14px;">
+      <strong>Rate-limit window.</strong> Cursor Pro has a <strong>5-hour rolling reset window</strong>. The
+      window starts on the first request and resets five hours later. Inside that window each dev gets a
+      bounded number of premium-model requests (and unlimited Auto-mode requests after the premium budget is
+      spent).
+    </p>
+    <p style="margin-top:14px;">
+      <strong>Deadlock Situation.</strong> Once the entire code is vibecoded and developers hit this limit, it creates a deadlock situation. We either need to wait it out or think of a workaround. It is practically guaranteed that everyone will hit their time window; in reality, the $20 subscription won't be much to sustain continuous output without hitting these bottlenecks.
+    </p>
+  </section>
+
+  <!-- 9. STACK -->
+  <section>
+    <h2><span class="num">10</span>Tech Stack</h2>
+    <table>
+      <thead><tr><th style="width:24%">Layer</th><th>Choice</th><th style="width:38%">Why</th></tr></thead>
+      <tbody>
+        <tr><td>Mobile apps</td><td>React Native (Expo)</td><td>One codebase per app, fastest hot reload, AI generates Expo cleanly.</td></tr>
+        <tr><td>Admin web</td><td>React + Vite + Tailwind</td><td>Team already knows it. Vite dev server is fast.</td></tr>
+        <tr><td>Backend</td><td><strong>None.</strong></td><td>Demo apps. Hardcoded JSON + local state (AsyncStorage / localStorage).</td></tr>
+        <tr><td>Auth</td><td>UI only, demo code <code>000000</code></td><td>No SMS, no provider. Login screens are pure UI.</td></tr>
+        <tr><td>Realtime</td><td>Scripted local timers</td><td>Cross-app flow simulated by scheduled state mutations in demo mode.</td></tr>
+        <tr><td>Notifications</td><td>In-app toast / banner only</td><td>No FCM, no APNs. The Admin NEW ORDER alert is local-state-driven.</td></tr>
+        <tr><td>Live tracking</td><td>Google Maps SDK + scripted route animation</td><td>Rider icon animates along a pre-defined path. No GPS.</td></tr>
+        <tr><td>Payments</td><td>Fake checkout UI</td><td>No real provider; place-order writes to local state.</td></tr>
+        <tr><td>AI tools</td><td>Claude Pro / Cursor Pro (1 per dev, $20)</td><td>Entry tier. See &sect;08 for window limits.</td></tr>
+        <tr><td>Hosting</td><td>Vercel (web) + Expo EAS preview (mobile)</td><td>Shareable links and QR codes for sales calls in minutes.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 10. SCOPE -->
+  <section>
+    <h2><span class="num">11</span>What's in &amp; what's out</h2>
+    <h3>In scope</h3>
+    <ul>
+      <li>Three demo apps: Customer + Rider (Expo), Admin web (React + Vite). ~33 screens total.</li>
+      <li>Hardcoded demo data + scripted cross-app flow in demo mode.</li>
+      <li>Phone-OTP UI (demo code <code>000000</code>), in-app notifications, animated live-tracking map.</li>
+      <li><strong>NEW ORDER</strong> alert moment in Admin (banner + sound + flash).</li>
+      <li>Premium UI polish, the whole point of the build.</li>
+      <li>Deployed preview links + QR codes for the marketing website.</li>
+    </ul>
+    <h3>Out of scope (explicitly not building)</h3>
+    <ul>
+      <li><strong>Any backend</strong>, no server, no database, no Firebase, no Supabase.</li>
+      <li>Real authentication, real SMS, real payments, real push notifications.</li>
+      <li>Separate Merchant app, restaurant-accept lives in Admin.</li>
+      <li>App-store / Play-store submissions.</li>
+      <li>Multi-tenant infrastructure, load testing, security review, production hardening.</li>
+      <li>Ratings, promo codes, referrals.</li>
+    </ul>
+  </section>
+
+  <!-- 11. RISKS -->
+  <section>
+    <h2><span class="num">12</span>Risks &amp; mitigations</h2>
+    <table>
+      <thead><tr><th style="width:40%">Risk</th><th style="width:16%">Likelihood</th><th>How we handle it</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>AI window cap hits every dev daily at $20/dev.</td>
+          <td><span class="pill red">High</span></td>
+          <td>Baked into the plan. Batch prompts, use Cursor free tier, hand-code obvious bits.</td>
+        </tr>
+        <tr>
+          <td>Marketing pitches the demo as production-ready.</td>
+          <td><span class="pill red">High</span></td>
+          <td>Landing-page wording: Reference build, customizable per client. Sales script clarifies demo only.</td>
+        </tr>
+        <tr>
+          <td>Scripted demo flow drifts during a live click-through.</td>
+          <td><span class="pill gold">Medium</span></td>
+          <td>Live demos use a rehearsed happy-path script.</td>
+        </tr>
+        <tr>
+          <td>UI looks rushed, not premium.</td>
+          <td><span class="pill gold">Medium</span></td>
+          <td>Day 9 entire team on polish pass. Web-sourced food images, designed typography, micro-animations.</td>
+        </tr>
+        <tr>
+          <td>Scope creep (can we add reviews? mid-sprint).</td>
+          <td><span class="pill gold">Medium</span></td>
+          <td>&sect;10 is the contract. Anything not on it is v2.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="doc-footer">
+    <span>Primotech &middot; Food Delivery MVP, Build Plan</span>
+    <span>v4 &middot; 11 Jun 2026</span>
+  </footer>
+
+</div>
+</body>
+</html>
