@@ -69,19 +69,16 @@
 
   <!-- TL;DR / INTRO -->
   <p>
-    Food-delivery MVP for the Primotech marketing site, three demo apps: Customer, Rider, Admin web.
-    As agreed earlier, this is <strong>UI-only</strong>: no backend on this clock, hardcoded JSON + scripted
-    timing make the demo flow look live. Two weeks, three frontend devs, AI-assisted (Claude Code / Cursor) on a
-    spec-first workflow. Week 1: every screen built and navigable. Week 2: polish, scripted demo.
-    deployed previews (Vercel + Expo EAS). AI budget: $20 per dev = $60 total.
+    This is the build plan for the Primotech Food Delivery MVP, covering three demo apps: Customer, Rider, and Admin Web. 
+    To meet the two-week timeline, we are strictly building a <strong>UI-only</strong> experience. There is no backend. Instead, we'll use hardcoded JSON and scripted timing to make the order flow feel completely real during a live demo. 
+    A team of three frontend developers will build and link every screen in week one, and dedicate week two entirely to premium polish and deployment.
   </p>
 
   <!-- 1. WHAT WE'RE BUILDING -->
   <section>
-    <h2><span class="num">01</span>What we're building, three demo apps</h2>
+    <h2><span class="num">01</span>The three demo apps we're building</h2>
     <p>
-      One food-delivery MVP, three surfaces. The Primotech website will host a live preview
-      links of these three apps so a prospect can see a working-looking product in 30 seconds. Each app is
+      One food-delivery MVP, three surfaces. We will share the live URL of the admin web and the app links for the customer and delivery partner. Each app is
       <strong>UI-complete and navigable</strong>, runs on hardcoded demo data, and scripts a happy-path flow
       that looks indistinguishable from the real thing in a short live demo.
     </p>
@@ -186,14 +183,13 @@
 
   <!-- 2. NO BACKEND -->
   <section>
-    <h2><span class="num">02</span>No backend, UI is the work</h2>
+    <h2><span class="num">02</span>Skipping the backend to focus on UI</h2>
     <p>
-      As <strong>decided and discussed earlier</strong>, we will <strong>not be spending time on backend
-      integration</strong> on this build, there is <strong>no backend</strong>. No server, no database,
-      no auth provider, no FCM, no Firebase. Every app runs entirely on hardcoded JSON + local state, and the
-      realtime feel of an order flowing from Customer to Admin to Rider is achieved with
-      <strong>scripted timing</strong> in demo mode, perfect for a recorded video, and good enough for a
-      60-second live click-through with a prospect.
+      To make sure the user experience is absolutely top-tier, we're intentionally leaving out the backend for this MVP. 
+      That means no servers, databases, or live auth providers to slow us down. Instead, everything runs smoothly on 
+      hardcoded JSON data and local state. We'll use <strong>cleverly timed scripts</strong> to simulate the real-time magic 
+      of an order moving from the Customer, to the Admin, to the Rider. It'll look perfect on video and feel incredibly real 
+      during a live demo.
     </p>
 
     <div class="callout gold">
@@ -212,7 +208,7 @@
       <li><strong>Data:</strong> hardcoded JSON (10 restaurants, 50 menu items, 30 historical orders, 5 riders, 1 demo user).</li>
       <li><strong>Auth:</strong> phone-OTP screens are UI only. Any number + code <code>000000</code> logs in to the hardcoded demo user. No SMS, no provider.</li>
       <li><strong>Order placement:</strong> writes to local state (AsyncStorage on mobile, localStorage on web).</li>
-      <li><strong>Cross-app feel:</strong> in demo mode, a scripted timer in Admin shows NEW ORDER ~3s after a customer order; rider app surfaces it ~5s later.</li>
+      <li><strong>Cross-app feel:</strong> since real-time communication isn't possible without a backend, we will record demo videos in a way that makes the apps feel like they are communicating live. We simulate real-world pacing with intentional delays—a scripted timer in the Admin web shows NEW ORDER ~3s after a customer order, and the Rider app surfaces it ~5s later.</li>
       <li><strong>Live tracking:</strong> the rider icon animates along a pre-defined map route, no real GPS, no realtime layer.</li>
       <li><strong>Push notifications:</strong> in-app toast/banner only. No real OS push (no FCM, no APNs registration).</li>
     </ul>
@@ -220,7 +216,7 @@
 
   <!-- 3. SCREEN INVENTORY -->
   <section>
-    <h2><span class="num">03</span>Screen inventory, every screen, every app</h2>
+    <h2><span class="num">03</span>A breakdown of every screen we'll build</h2>
     <p>
       Each screen is sized to fit one focused day of work or less. The basics (profile, notifications, order
       history, addresses) are explicitly in, a demo without them looks like a prototype, not a product.
@@ -283,10 +279,10 @@
 
   <!-- 4. HOW -->
   <section>
-    <h2><span class="num">04</span>How we build, spec-first vibecoding</h2>
+    <h2><span class="num">04</span>How we build: clear specs &amp; AI assistance</h2>
 
     <p>
-      We use a spec-first approach to drive our AI coding tools. By defining clear requirements in Markdown before writing any code, we ensure the AI generates precise and reliable components without deviating from the goal.
+      We like to be very intentional before we write a single line of code. By writing out clear, simple requirements in Markdown first, we can guide our AI coding tools to generate exactly what we need, keeping us moving fast and staying on track.
     </p>
     <p>
       For example, before building the Customer Home screen, we write a strict <code>03-home.md</code> spec detailing:
@@ -308,7 +304,7 @@ Display the main restaurant feed and top-level categories.
   
   <!-- 5. WHERE WE SOURCE UI -->
   <section>
-    <h2><span class="num">05</span>Where we source UI</h2>
+    <h2><span class="num">05</span>Where we're finding our UI inspiration</h2>
     <p>
       To maintain velocity, we leverage high-quality open source Figma community templates for our design foundation rather than designing from scratch. We can pull screens, components, and layout ideas directly from these UI kits:
     </p>
@@ -325,11 +321,9 @@ Display the main restaurant feed and top-level categories.
 
   <!-- 6. DEV BREAKDOWN -->
   <section>
-    <h2><span class="num">06</span>Dev breakdown, who owns what</h2>
+    <h2><span class="num">06</span>The team breakdown: who's building what</h2>
     <p>
-      Three frontend devs, one owner per surface. No backend day for anyone, everyone is on UI from
-      Day 1. Each app is independent: no shared component kit, no shared data file across apps, so devs
-      never block each other. I take updates from each dev daily on what shipped that day.
+      We have three developers, and each person gets to fully own one of the apps. Since there's no backend and no shared components to wait on, everyone can dive straight into building UI from Day 1 without blocking each other. We'll check in daily to celebrate what we've shipped and help each other out.
     </p>
 
     <!-- DEV 1 -->
@@ -355,6 +349,7 @@ Display the main restaurant feed and top-level categories.
       <h4>Week 1 deliverables</h4>
       <ul>
         <li>Customer app skeleton + nav + own theme tokens / component set.</li>
+        <li>Phone-OTP UI flow wired (any number + <code>000000</code> &rarr; demo user).</li>
         <li>Own demo-data JSON (restaurants, menu items, orders for this app).</li>
         <li>Home, search, restaurant detail, item detail, cart, checkout.</li>
         <li>Order tracking screen with status timeline (animated map is Week 2).</li>
@@ -362,7 +357,6 @@ Display the main restaurant feed and top-level categories.
 
       <h4>Week 2 deliverables</h4>
       <ul>
-        <li>Phone-OTP UI flow wired (any number + <code>000000</code> &rarr; demo user).</li>
         <li>Animated rider on Google Map (scripted route).</li>
         <li>Order history, Profile, Notifications screens.</li>
         <li>Premium polish: empty/loading states, micro-animations, haptics, web-sourced food images.</li>
@@ -393,6 +387,7 @@ Display the main restaurant feed and top-level categories.
       <h4>Week 1 deliverables</h4>
       <ul>
         <li>Rider app skeleton + nav + own theme tokens / component set.</li>
+        <li>Phone-OTP UI flow.</li>
         <li>Own demo-data JSON (rider profile, available orders, past deliveries).</li>
         <li>Home / dashboard, Available orders list, Order detail (pre-accept).</li>
         <li>Active-delivery screen with step actions (mark picked up, mark delivered) and basic map.</li>
@@ -400,7 +395,6 @@ Display the main restaurant feed and top-level categories.
 
       <h4>Week 2 deliverables</h4>
       <ul>
-        <li>Phone-OTP UI flow.</li>
         <li>Scripted rider-location animation along a pre-defined route.</li>
         <li>Delivery summary, Earnings/history, Notifications, Profile, Settings/Help.</li>
         <li>Premium polish: swipe-to-confirm, transition animations, haptic feedback.</li>
@@ -452,13 +446,13 @@ Display the main restaurant feed and top-level categories.
 
   <!-- 6. WEEK 1 -->
   <section>
-    <h2><span class="num">07</span>Week 1, every screen exists, on mocked data</h2>
+    <h2><span class="num">07</span>Week 1: Getting every screen up and running</h2>
 
     <div class="day">
-      <div class="head"><span class="when">DAY 1 &middot; MON</span><span class="what">Foundation</span></div>
+      <div class="head"><span class="when">DAY 1 &middot; MON</span><span class="what">Foundation &amp; Auth</span></div>
       <ul>
-        <li><strong>Dev 1:</strong> Bootstrap Customer Expo app, own theme tokens / component set, own demo-data JSON, home screen scaffold.</li>
-        <li><strong>Dev 2:</strong> Bootstrap Rider Expo app, own theme tokens / component set, own demo-data JSON, home / dashboard scaffold.</li>
+        <li><strong>Dev 1:</strong> Bootstrap Customer Expo app, own theme tokens / component set, Phone-OTP UI flow, own demo-data JSON.</li>
+        <li><strong>Dev 2:</strong> Bootstrap Rider Expo app, own theme tokens / component set, Phone-OTP UI flow, own demo-data JSON.</li>
         <li><strong>Dev 3:</strong> Bootstrap Admin web (Vite + Tailwind), shell + sidebar, login screen, own demo-data JSON.</li>
         <li>EOD: three independent repos pushed, each app renders its home screen on its own mock data.</li>
       </ul>
@@ -511,12 +505,12 @@ Display the main restaurant feed and top-level categories.
 
   <!-- 7. WEEK 2 -->
   <section>
-    <h2><span class="num">08</span>Week 2, phone OTP, NEW ORDER, animations, ship</h2>
+    <h2><span class="num">08</span>Week 2: Animations, polish, and final delivery</h2>
 
     <div class="day">
-      <div class="head"><span class="when">DAY 6 &middot; MON</span><span class="what">Phone OTP (UI only)</span></div>
+      <div class="head"><span class="when">DAY 6 &middot; MON</span><span class="what">Secondary UI</span></div>
       <ul>
-        <li><strong>Dev 1 + Dev 2:</strong> Phone-OTP screens in Customer and Rider. Any number + <code>000000</code> &rarr; demo user. No SMS provider.</li>
+        <li><strong>Dev 1 + Dev 2:</strong> Secondary screens (Notifications, Profile, Settings) + code cleanup.</li>
         <li><strong>Dev 3:</strong> Admin Settings screen + Customers list.</li>
       </ul>
     </div>
@@ -557,7 +551,7 @@ Display the main restaurant feed and top-level categories.
         
         
         <li>Hand off EAS QR codes + Vercel URL to marketing.</li>
-        <li>Final walkthrough with CEO. <span class="pill green">Shipped</span></li>
+        <li>Walkthrough with the entire team. <span class="pill green">Shipped</span></li>
       </ul>
     </div>
 
@@ -573,7 +567,7 @@ Display the main restaurant feed and top-level categories.
 
   <!-- 8. AI BUDGET -->
   <section>
-    <h2><span class="num">09</span>AI tooling</h2>
+    <h2><span class="num">09</span>Our AI tooling strategy</h2>
 
     <p>
       Each developer gets one Cursor Pro subscription.
@@ -585,13 +579,13 @@ Display the main restaurant feed and top-level categories.
       spent).
     </p>
     <p style="margin-top:14px;">
-      <strong>Deadlock Situation.</strong> Once the entire code is vibecoded and developers hit this limit, it creates a deadlock situation. We either need to wait it out or think of a workaround. It is practically guaranteed that everyone will hit their time window; in reality, the $20 subscription won't be much to sustain continuous output without hitting these bottlenecks.
+      <strong>Managing limits.</strong> AI tools are incredible, but they do have usage caps. If we hit our request limits, we might experience a temporary pause. When that happens, we'll simply shift our focus to manual polishing, reviewing each other's work, or taking a well-deserved coffee break while our limits reset. We're planning for this so it won't derail us!
     </p>
   </section>
 
   <!-- 9. STACK -->
   <section>
-    <h2><span class="num">10</span>Tech Stack</h2>
+    <h2><span class="num">10</span>The tech stack we're using</h2>
     <table>
       <thead><tr><th style="width:24%">Layer</th><th>Choice</th><th style="width:38%">Why</th></tr></thead>
       <tbody>
@@ -611,7 +605,7 @@ Display the main restaurant feed and top-level categories.
 
   <!-- 10. SCOPE -->
   <section>
-    <h2><span class="num">11</span>What's in &amp; what's out</h2>
+    <h2><span class="num">11</span>Project scope: What's in and what's out</h2>
     <h3>In scope</h3>
     <ul>
       <li>Three demo apps: Customer + Rider (Expo), Admin web (React + Vite). ~33 screens total.</li>
@@ -632,44 +626,11 @@ Display the main restaurant feed and top-level categories.
     </ul>
   </section>
 
-  <!-- 11. RISKS -->
-  <section>
-    <h2><span class="num">12</span>Risks &amp; mitigations</h2>
-    <table>
-      <thead><tr><th style="width:40%">Risk</th><th style="width:16%">Likelihood</th><th>How we handle it</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>AI window cap hits every dev daily at $20/dev.</td>
-          <td><span class="pill red">High</span></td>
-          <td>Baked into the plan. Batch prompts, use Cursor free tier, hand-code obvious bits.</td>
-        </tr>
-        <tr>
-          <td>Marketing pitches the demo as production-ready.</td>
-          <td><span class="pill red">High</span></td>
-          <td>Landing-page wording: Reference build, customizable per client. Sales script clarifies demo only.</td>
-        </tr>
-        <tr>
-          <td>Scripted demo flow drifts during a live click-through.</td>
-          <td><span class="pill gold">Medium</span></td>
-          <td>Live demos use a rehearsed happy-path script.</td>
-        </tr>
-        <tr>
-          <td>UI looks rushed, not premium.</td>
-          <td><span class="pill gold">Medium</span></td>
-          <td>Day 9 entire team on polish pass. Web-sourced food images, designed typography, micro-animations.</td>
-        </tr>
-        <tr>
-          <td>Scope creep (can we add reviews? mid-sprint).</td>
-          <td><span class="pill gold">Medium</span></td>
-          <td>&sect;10 is the contract. Anything not on it is v2.</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+
 
   <footer class="doc-footer">
     <span>Primotech &middot; Food Delivery MVP, Build Plan</span>
-    <span>v4 &middot; 11 Jun 2026</span>
+    <span>v1 &middot; 11 Jun 2026</span>
   </footer>
 
 </div>
